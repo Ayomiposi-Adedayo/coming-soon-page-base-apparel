@@ -36,6 +36,7 @@ body {
     width: 100%;
     max-width: 800px;
     margin-top: 10%;
+    margin-bottom: 10%;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -278,8 +279,21 @@ input {
   padding-left: 6%;
   background-color: #ffffff00;
   border: 1px solid #ce9797;
+  border-color: #ce9797;
   border-radius: 45px;
   font-size: 1.2rem;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #f96262;
+  border: 1px solid black;
+}
+
+textarea:focus {
+  outline: none;
+  border: 1px solid #ce9797;
+  border: 1px solid black;
 }
 
 @media screen and (min-width: 300px) and (max-width: 500px) {
