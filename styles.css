@@ -303,11 +303,21 @@ input {
 button {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  background: linear-gradient(135deg, #f8bfbf 0%, #ee8c8c 60%);
+  background: #ee8c8c;
   padding: 4% 9%;
   border: 0;
   border-radius: 55px;
   position: absolute;
   left: 80%;
+  box-shadow: 0px 10px 62px 6px rgba(248, 191, 191, 0.98);
+  -webkit-box-shadow: 0px 10px 62px 6px rgba(248, 191, 191, 0.98);
+  -moz-box-shadow: 0px 10px 62px 6px rgba(248, 191, 191, 0.98);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #fbbbbb;
 }
 /*# sourceMappingURL=styles.css.map */
