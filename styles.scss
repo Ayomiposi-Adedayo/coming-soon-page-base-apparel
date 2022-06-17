@@ -7,12 +7,16 @@ body {
     padding: 0%;
     font-family: "Josefin Sans", sans-serif;
     font-size: 16px;
-    // background: linear-gradient(135deg, #ffffff, #fff5f5);
-    background: rgb(255, 255, 255);
-    background: #fff5f5;
-    background: linear-gradient( 135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 245, 245, 1) 60%);
+    background-color: #fff5f5;
     // button-gradient
     // background: linear-gradient( 135deg, from #f8bfbf, to #ee8c8c);
+    position: relative;
+}
+
+body {
+    background: #fff5f5;
+    background: linear-gradient( 135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 245, 245, 1) 60%);
+    min-height: 100vh;
 }
 
 $primary-color: hsl(0, 36%, 70%);
@@ -33,8 +37,11 @@ $tertiary-color: hsl(0, 6%, 24%);
     }
     .header-desktop {
         display: block;
+        top: 10%;
+        width: 100%;
+        max-width: 800px;
         margin-top: 10%;
-        // padding: 5%;
+        align-self: center;
     }
     .logo {
         width: 50%;
@@ -59,7 +66,7 @@ main {
 @media screen and (min-width: 900px) {
     main {
         flex-direction: row-reverse;
-        height: 100vh;
+        min-height: 100vh;
     }
 }
 
@@ -91,6 +98,9 @@ main {
     background-size: contain;
     background-size: cover;
     background-position: center;
+    // margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-main {
@@ -100,8 +110,7 @@ main {
 
 .hero-text {
     margin: auto;
-    // margin-top: 35%;
-    transform: translateY(70%);
+    // margin-left: 4%;
 }
 
 @media screen and (max-width: 900px) {
@@ -111,10 +120,11 @@ main {
         padding-top: 12%;
         font-size: 0.9rem;
         text-align: center;
+        background-image: url(/images/bg-pattern-desktop...svg);
     }
     .hero-text {
         margin: auto;
-        transform: translateY(0%);
+        // transform: translateY(0%);
     }
 }
 
@@ -145,26 +155,63 @@ p {
     color: $primary-color;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-top: 0%;
-    margin-bottom: 2%;
-    font-weight: 100;
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    h1 {
+        font-size: 3rem;
+        line-height: 1.1em;
+        margin-top: 0%;
+        margin-bottom: 2%;
+        font-weight: 100;
+    }
+    p {
+        line-height: 1.5em;
+        font-size: 1.1em;
+    }
 }
 
-p {
-    line-height: 1.5em;
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    h1 {
+        font-size: 4.5rem;
+        margin-top: 0%;
+        margin-bottom: 2%;
+        font-weight: 100;
+        letter-spacing: 0.25em;
+        margin-left: 2%;
+    }
+    p {
+        margin-left: 2%;
+        line-height: 1.5em;
+        font-size: 1.3em;
+    }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+    h1 {
+        font-size: 4.5rem;
+        margin-top: 0%;
+        margin-bottom: 2%;
+        font-weight: 100;
+        letter-spacing: 0.25em;
+        margin-left: 2%;
+    }
+    p {
+        margin-left: 2%;
+        line-height: 1.5em;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
     h1 {
         font-size: 5.5rem;
         margin-top: 0%;
         margin-bottom: 2%;
         font-weight: 100;
         letter-spacing: 0.25em;
+        margin-left: 2%;
     }
     p {
+        margin-left: 2%;
         line-height: 1.5em;
         font-size: 1.3em;
     }
@@ -179,11 +226,12 @@ form {
     width: 100%;
     display: flex;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 8%;
     // margin-left: 5%;
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-bottom: 15%;
 }
 
 ::placeholder {
@@ -199,6 +247,17 @@ input {
     background-color: #ffffff00;
     border: 1px solid $primary-color;
     border-radius: 45px;
+    font-size: 1.2rem;
+    // font-size: 2rem;
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    input {
+        font-size: 1rem;
+    }
+     ::placeholder {
+        font-size: 1rem;
+    }
 }
 
 button {
